@@ -1,0 +1,460 @@
+/* =========================
+   Header Styles
+========================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+/* =========================
+   Top Bar
+========================= */
+.top-bar {
+  background: #1f2937;
+  color: #ffffff;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-info .phone-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-info .phone-link:hover {
+  color: #3b82f6;
+}
+
+.top-bar-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.login-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #3b82f6;
+}
+
+.cart-info {
+  color: #d1d5db;
+  font-weight: 500;
+}
+
+/* =========================
+   Main Navigation
+========================= */
+.main-nav {
+  background: #ffffff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #3b82f6;
+}
+
+/* Dropdown */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: inherit;
+  font-weight: 500;
+}
+
+.dropdown-toggle::after {
+  content: '▼';
+  font-size: 0.65rem;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle:hover::after,
+.dropdown-toggle:focus::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown:focus-within .dropdown-menu,
+.nav-item.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #374151;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+  color: #3b82f6;
+}
+
+/* =========================
+   Categories Bar
+========================= */
+.categories-bar {
+  background: #f9fafb;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.categories-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.categories-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.category-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.category-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-link:hover {
+  color: #3b82f6;
+}
+
+/* =========================
+   Header Actions
+========================= */
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.call-link {
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.call-link:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.logout-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.logout-link:hover {
+  color: #dc2626;
+}
+
+/* =========================
+   Hamburger Menu (Mobile)
+========================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #374151;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =========================
+   Mobile Menu
+========================= */
+.nav-list {
+  position: relative;
+  display: flex;
+  list-style: none;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 0;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+    z-index: 1002;
+    padding-top: 80px;
+  }
+
+  .nav-list.active {
+    left: 0;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid #e5e7eb;
+    width: 100%;
+  }
+
+  .mobile-menu-header {
+    display: block;
+    background: #f3f4f6;
+    padding: 1rem;
+    font-weight: 600;
+  }
+
+  .mobile-close-btn {
+    font-size: 1.5rem;
+    color: #374151;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .mobile-close-btn:hover {
+    color: #dc2626;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border: none;
+    background: #f9fafb;
+    width: 100%;
+    padding: 0;
+  }
+
+  .dropdown-item {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .nav-link {
+    padding: 1rem 2rem;
+    display: block;
+  }
+
+  .mobile-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+  }
+}
+
+/* =========================
+   Responsive Adjustments
+========================= */
+@media (max-width: 1024px) {
+  .category-links {
+    gap: 1rem;
+  }
+  .category-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 40px;
+  }
+
+  .top-bar-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .categories-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* =========================
+   Desktop Navigation Adjustments
+========================= */
+@media (min-width: 769px) {
+  /* Increase gap between top-level nav items */
+  .nav-list {
+    gap: 3rem; /* was 2rem, now more spacing */
+  }
+
+  /* Increase padding for top-level links */
+  .nav-link {
+    padding: 0.75rem 0; /* was 0.5rem */
+    font-size: 1rem; /* slightly bigger for readability */
+  }
+
+  /* Dropdown items spacing */
+  .dropdown-menu {
+    min-width: 220px; /* keep width for dropdowns */
+    padding: 0.75rem 0; /* more padding for dropdown */
+  }
+
+  .dropdown-item {
+    padding: 0.75rem 1.25rem; /* increase horizontal spacing */
+    font-size: 0.95rem; /* slightly bigger */
+  }
+
+  /* Dropdown vertical spacing */
+  .nav-item.dropdown + .nav-item.dropdown {
+    margin-left: 1rem; /* extra spacing if needed */
+  }
+}
+
+
+/* =========================
+   Animations
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
