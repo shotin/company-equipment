@@ -51,7 +51,7 @@ const ContactPage = () => {
     {
       icon: '📧',
       title: 'Email',
-      details: ['company@controlequipment.org', 'company@controlequipment.org', 'company@controlequipment.org'],
+      details: ['company@controlequipment.org'],
       action: 'Send Email'
     },
     {
